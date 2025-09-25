@@ -2,12 +2,13 @@
   --monster-gray: 152, 153, 155;
   --white: 255,255,255;
   --black: 11, 12, 12;
-  --monster-dark: 55, 53, 62;
+  --monster-gray-dark: 55, 53, 62;
+  --monster-dark: 35, 33, 42;
 }
 
 @font-face {
     font-family: 'MonsterFont';  /* name you’ll use in font-family */
-    src: url('fonts/Green_Energy.ttf') format('truetype');
+    src: url('/static/fonts/WhiteMonster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,51 +17,100 @@
     box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
     text-align: center;
+}
+
+h1 {
     height: 70%;
     font-size: 5vh;
+}
+
+h2 {
+    margin-top: 6vh;
+    font-size: 4vh;
 }
 
 body {
     padding: 0;
     margin: 0;
     font-family: 'MonsterFont', sans-serif;
+    color: rgb(var(--white));
+    background-color: rbg(var(--monster-gray-dark));
 }
+
 
 header, footer {
     background-color: rgb(var(--black));
     color: rgb(var(--monster-gray));
     height: 10vh;
+    width: 100vw;
     display: flex;         
     align-items: center;   
     justify-content: center;
+    position: fixed;
 }
 
-
 header {
-    
+    top: 0;
 }
 
 footer {
-
+    bottom: 0;
 }
 
 .site-content {
-    background-color: rgb(var(--monster-dark));
+    background-color: rgb(var(--monster-gray-dark));
     color: rgb(var(--white));  
     display: flex;
     justify-content: space-between;
+    margin: 9vh 0;
 }
 
 article {
-    height: 1000px;
-    width: 500px;
-    background-color: red;
+    height: 100vh;
+    width: 100%;
+}
+
+article img {
+    margin:  5vh 0.1vw auto;
+    width: 8vw;
+    height: auto;
+    top: 0;
+}
+
+.leading-img {
+    width: 12vw;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
 }
 
 aside {
-    background-color: blue;
-    width: 1000px;
+    width: 25vw;
+    background-color: rgb(var(--monster-dark));
+}
+
+
+
+.inline-icon {
+    margin: 0;
+    height: 1em;      
+    width: auto;      
+    vertical-align: middle; 
+}
+
+.audio-container audio{
+    display: none;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+.fallback {
+    font-size: 1rem;
 }
