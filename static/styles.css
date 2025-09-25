@@ -1,0 +1,66 @@
+:root {
+  --monster-gray: 152, 153, 155;
+  --white: 255,255,255;
+  --black: 11, 12, 12;
+  --monster-dark: 55, 53, 62;
+}
+
+@font-face {
+    font-family: 'MonsterFont';  /* name you’ll use in font-family */
+    src: url('fonts/Green_Energy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    height: 70%;
+    font-size: 5vh;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'MonsterFont', sans-serif;
+}
+
+header, footer {
+    background-color: rgb(var(--black));
+    color: rgb(var(--monster-gray));
+    height: 10vh;
+    display: flex;         
+    align-items: center;   
+    justify-content: center;
+}
+
+
+header {
+    
+}
+
+footer {
+
+}
+
+.site-content {
+    background-color: rgb(var(--monster-dark));
+    color: rgb(var(--white));  
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    height: 1000px;
+    width: 500px;
+    background-color: red;
+}
+
+aside {
+    background-color: blue;
+    width: 1000px;
+}
