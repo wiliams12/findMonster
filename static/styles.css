@@ -45,7 +45,6 @@ h3 {
 }
 
 body {
-    padding: 0;
     margin: 0;
     font-family: "MonsterFont", "Fallback", serif;
     color: rgb(var(--white));
@@ -78,6 +77,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: 9vh 0;
+    padding: 0 50px;
 }
 
 article {
@@ -86,13 +86,13 @@ article {
 
 article img {
     margin:  5vh 0.1vw auto;
-    width: 8vw;
-    height: auto;
+    width: auto;
+    height: 50vh;
     top: 0;
 }
 
 .leading-img {
-    width: 12vw;
+    height: 60vh;
 }
 
 .img-div {
@@ -133,12 +133,13 @@ p {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .price-list li {
     width: 400px;
     height: 200px;
-    margin: 20px 0;
+    margin: 20px 30px;
     background-color: rgb(var(--monster-dark));
     box-shadow: 0 4px 10px 2px rgb(var(--monster-gray));
     list-style-type: none;
@@ -148,13 +149,34 @@ p {
 }
 
 .price-list h4 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-decoration: underline;
     color: rgb(var(--monster-gray))
 }
 
 .price-list p {
-    font-size: 2.7rem;
+    font-size: 1.8rem;
     color: rgb(var(--white));
     padding-left: 1rem;
+}
+
+@media (max-width: 940px) {
+    .price-list ul {
+        flex-direction: column;
+    }
+
+    .price-list li {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .img-div img {
+        display: none;
+    }
+
+    .img-div .leading-img {
+        display: block;
+    }
 }
