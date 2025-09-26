@@ -23,10 +23,13 @@ class Scraper():
             shop = handle_shop(shop)
             price = handle_price(price)
 
-            result.append({
+            data = {
                 "price":price,
                 "shop":shop,
-            })
+            }
+
+            if data not in result:
+                result.append(data)
 
         return result
 

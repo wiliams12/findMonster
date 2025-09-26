@@ -5,5 +5,5 @@ def handle_shop(text):
 
 def handle_price(text):
     text = text.strip()
-    text = text.split()[0]
+    text = text.split()[0].replace(",",".") + ",-"
     return text

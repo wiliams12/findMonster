@@ -13,11 +13,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Fallback';  /* name you’ll use in font-family */
+    src: url('/static/fonts/Fallback.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    size-adjust: 80%;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3, h4, p {
     margin: 0;
     text-align: center;
 }
@@ -32,10 +40,14 @@ h2 {
     font-size: 4vh;
 }
 
+h3 {
+    font-size: 3vh;
+}
+
 body {
     padding: 0;
     margin: 0;
-    font-family: 'MonsterFont', sans-serif;
+    font-family: "MonsterFont", "Fallback", serif;
     color: rgb(var(--white));
     background-color: rbg(var(--monster-gray-dark));
 }
@@ -61,7 +73,7 @@ footer {
 }
 
 .site-content {
-    background-color: rgb(var(--monster-gray-dark));
+    background-color: rgb(var(--monster-dark));
     color: rgb(var(--white));  
     display: flex;
     justify-content: space-between;
@@ -69,7 +81,6 @@ footer {
 }
 
 article {
-    height: 100vh;
     width: 100%;
 }
 
@@ -91,16 +102,19 @@ article img {
 
 aside {
     width: 25vw;
-    background-color: rgb(var(--monster-dark));
+    background-color: rgb(var(--monster-gray-dark));
+    display: none;
 }
-
-
 
 .inline-icon {
     margin: 0;
     height: 1em;      
     width: auto;      
     vertical-align: middle; 
+}
+
+.breaker {
+    height: 10vh;
 }
 
 .audio-container audio{
@@ -113,4 +127,34 @@ p {
 
 .fallback {
     font-size: 1rem;
+}
+
+.price-list ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.price-list li {
+    width: 400px;
+    height: 200px;
+    margin: 20px 0;
+    background-color: rgb(var(--monster-dark));
+    box-shadow: 0 4px 10px 2px rgb(var(--monster-gray));
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.price-list h4 {
+    font-size: 3rem;
+    text-decoration: underline;
+    color: rgb(var(--monster-gray))
+}
+
+.price-list p {
+    font-size: 2.7rem;
+    color: rgb(var(--white));
+    padding-left: 1rem;
 }
